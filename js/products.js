@@ -40,8 +40,6 @@ document.addEventListener("DOMContentLoaded", function (e) {
             listaAutos = resultObj.data;
             showProductList()
 
-        } else{
-            console.log("hola")
-        }
+        } 
     }   
     )})
