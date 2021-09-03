@@ -58,7 +58,7 @@ document.getElementById("nav").innerHTML =`
   <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
   <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
   <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-  <a class="py-2 d-none d-md-inline-block fas fa-user" href="">${localStorage.getItem('nombreuser')}</a>
+  <a class="fas fa-user py-2 d-none d-md-inline-block" href="">${localStorage.getItem('nombreuser')}</a>
 </div>
 </nav>
 `
