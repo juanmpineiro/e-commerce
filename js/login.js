@@ -26,3 +26,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     window.location.replace('inicio.html');
   }
+
+  function setUsername(){
+    let username = document.getElementById("user").value
+    localStorage.setItem("nombreuser", username)
+  }
+
