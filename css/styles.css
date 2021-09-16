@@ -6,8 +6,8 @@
     font-weight: bold;
 }
 
-.jumbotron {
-  height: 50vh;
+/* .jumbotron { */
+  /* height: 50vh;
   padding: 5em inherit;
   margin-bottom: 0;
   background-color: #53C0FB;
@@ -17,7 +17,7 @@
   background-repeat: no-repeat;
   color: black;
   font-weight: bold;
-}
+} */
 
 @media (min-width: 768px) {
   .jumbotron {

@@ -27,7 +27,7 @@
 
     <div class="container">
       <div class="row">
-          <div class="col text-right">
+          <div class="col text-center">
               <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
                   <label class="btn btn-light" id="sortByPriceAsc">
                       <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down mr-1"></i>Orden por menor precio
@@ -42,12 +42,12 @@
               </div>
           </div>
       </div>
-      <div class="row justify-content-end">
-        <div class="col-md-6"></div>
+      <div class="row">
+        
           <div class="col-md-6 col-sm-12 mb-1 container">
             <div class="row container p-0 m-0">
-              <div class="col">
-                <p class="font-weight-normal text-right my-2">Filtrar por precio</p>
+              <div class="col text-center">
+                <p class="font-weight-normal text-right my-2">Filtrar por precio:</p>
               </div>
               <div class="col">
                 <input class="form-control" type="number" placeholder="min." id="rangeFilterPriceMin">
@@ -57,7 +57,7 @@
               </div>
               <div class="col-3 p-0">
                 <div class="btn-group" role="group">
-                  <button class="btn btn-light btn-block" id="rangeFilterPrice">Filtrar</button>
+                  <button class="btn btn-light btn-block border border-1" id="rangeFilterPrice">Filtrar</button>
                   <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
                 </div>
               </div>
@@ -68,6 +68,20 @@
       </div>
   </div>
 </main>
+ 
+<!--Buscador-->
+<div class="col-md-3 col-sm-12 mb-1 container">
+  <div class="row container p-0 m-0">
+    <div class="col">
+      <input class="form-control" placeholder="Buscar productos" id="buscador_texto">
+    </div>
+    <div class="col-3 p-0">
+      <div class="btn-group" role="group">
+        <button class="btn btn-light btn-block border border-1" id="buscador_boton">Buscar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <div id="listaproductos"></div>
 
@@ -85,5 +99,6 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/init.js"></script>
     <script src="js/products.js"></script>
+    
   </body>
 </html>

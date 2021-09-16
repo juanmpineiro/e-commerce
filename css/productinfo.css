@@ -1,0 +1,125 @@
+/* Mostrar el producto */
+
+@media  only Screen and (min-width : 1400px){
+    .imagewrap {display:inline-block;position:relative; margin-left: 5%; margin-right: 5%; border: 5px solid; size: 300%;}
+    .responsiveimg{width: 100%; height: auto; align-items: left;}
+    .button1 {position:absolute;bottom:47%;left:2%; border-radius: 50%; opacity: 65%; align-items: center;}
+    .button2 {position:absolute;bottom:47%;right:2%; border-radius: 50%; opacity: 65%; align-items: center;}
+    
+
+.up{
+    width: 100%;
+    height: 30px;
+}
+
+.flexContainer{
+    list-style: none;
+    margin-right: 15%;
+    margin-left: 15%;
+
+}
+.container1{
+    float: left;
+    width: 50%;
+}
+
+.container2 {
+    float: left;
+    width: 50%;
+    text-align: left;
+}
+
+.clear { 
+    clear: both; 
+}
+
+.title{
+    font-style: italic;
+    font-weight: bold;
+    font-family: "Century Gothic",sans-serif;
+
+}
+
+.price{
+    font-size: 25px;
+    font-weight: 400;
+    font-style: italic;
+    font-family: "Century Gothic",sans-serif
+}
+
+
+/* Comentarios */
+
+.division{
+    border-top: 1px solid gray
+}
+
+.score-selected{
+    margin-right: 1%;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 5%;
+}
+.disabled-option{
+    color: black;
+}
+
+}
+
+
+
+@media  only Screen and (max-width : 1400px){
+
+    .imagewrap {display:inline-block;position:relative; margin-left: 5%; margin-right: 5%; border: 5px solid; size: 300%;}
+    .responsiveimg{width: 100%; height: auto; align-items: left;}
+    .button1 {position:absolute;bottom:47%;left:2%; border-radius: 50%; opacity: 65%; align-items: center;}
+    .button2 {position:absolute;bottom:47%;right:2%; border-radius: 50%; opacity: 65%; align-items: center;}
+
+    .up{
+        width: 100%;
+        margin-top: 1%;
+    }
+    
+    .flexContainer{
+        list-style: none;
+        margin-right: 9%;
+    }
+    .container1{
+        width: 100%;
+    }
+    
+    .container2 {
+        width: 100%;
+        margin: 3%;
+    }
+    
+    .clear { clear: both; }
+    
+    .fontsize{
+        font-size: medium;
+    }
+
+    /* Comentarios */
+
+.division{
+    border-top: 1px solid gray
+}
+
+#commentaries{
+    margin-left: 3%;
+}
+.score-selected{
+    margin-right: 1%;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 5%;
+}
+.disabled-option{
+    color: black;
+}
+
+}
+
+

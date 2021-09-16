@@ -13,26 +13,40 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/productinfo.css">
 </head>
 
 <body>
-  <nav class="site-header sticky-top py-1 bg-dark">
-    <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
-      <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-      <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-      <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-    </div>
+  <nav id="nav">
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 19/09/2021) y Entrega 4 (Fecha de entrega: 03/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
-  </div>
+  <div id="name" class="up"></div>
+  <main class="main">
+  <div class="flexContainer">
+      <div id="show-images" class="container1"></div>
+      <div class="container2">
+        <div id="product-info"></div>
+      </div>
+      <div class="clear"></div>
+      <br>
+        <div id="commentaries">
+          <form required id="comentform">
+          <div class="coment-bottom bg-white p-2 px-4">
+            <div class="d-flex flex-row add-comment-section mt-4 mb-4"><img class="img-fluid img-responsive rounded-circle mr-2" src="img/blank-profile-picture.png" width="38">
+              <input type="text" class="form-control mr-3" placeholder="Escribe tu comentario" id="comenttext">
+              <select class="score-selected" id="comentpoststars" required >
+                <option selected disabled hidden class="disabledoption" value="">Puntuacion</option>
+                <option value="1">1 estrella</option>
+                <option value="2">2 estrellas</option>
+                <option value="3">3 estrellas</option>
+                <option value="4">4 estrellas</option>
+                <option value="5">5 estrellas</option>
+              </select>
+              <button class="btn btn-primary" type="submit" id="botonenviar">Publicar</button></div>
+            </form>
+        </div>
+      </div>
+</div>
+</main>
   <footer class="text-muted">
     <div class="container">
       <p class="float-right">
@@ -40,6 +54,7 @@
       </p>
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
       <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+    </div>
     </div>
   </footer>
   <div id="spinner-wrapper">

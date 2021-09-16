@@ -51,14 +51,35 @@ document.addEventListener("DOMContentLoaded", function(e){
 
 
 document.getElementById("nav").innerHTML =`
-<nav class="site-header sticky-top py-1 bg-dark">
-<div class="container d-flex flex-column flex-md-row justify-content-between">
-  <a class="py-2 d-none d-md-inline-block" href="inicio.html">Inicio</a>
-  <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-  <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-  <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-  <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-  <a class="fas fa-user py-2 d-none d-md-inline-block" href="">${localStorage.getItem('nombreuser')}</a>
-</div>
-</nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="inicio.html">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="categories.html">Categorias</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="products.html">Productos</a>
+          </li>
+          <li class="nav-item active">
+          <a class="nav-link" href="sell.html">Vender</a>
+        </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="cart.html">Mi carrito</a>
+      </li>
+      <li class="nav-item active">
+      <a class="nav-link" href="#">${localStorage.getItem("nombreuser")}</a>
+    </li>
+
+        </ul>
+      </div>
+    </nav>
 `
+
+//img-fluid max-width: 100%
