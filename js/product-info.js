@@ -59,7 +59,18 @@ function before(){
 
 function scoreStars(value){
 
-    if(comments.data[value].score === 2){
+    if(value === 1){
+        return `
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+    
+         `
+    }
+
+    if(value === 2){
         return `
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star checked"></span>
@@ -70,7 +81,7 @@ function scoreStars(value){
          `
     }
 
-    else if(comments.data[value].score === 3){
+    else if(value === 3){
         return `
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star checked"></span>
@@ -81,7 +92,7 @@ function scoreStars(value){
         `
     }
 
-    else if(comments.data[value].score === 4){
+    else if(value === 4){
         return `
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star checked"></span>
@@ -92,7 +103,7 @@ function scoreStars(value){
         `
     }
 
-    else if(comments.data[value].score === 5){
+    else if(value === 5){
         return `
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star checked"></span>
@@ -119,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function(e){
                     <div class="d-flex flex-row align-items-center commented-user">
                         <h5 class="mr-2">${comments.data[i].user}</h5><span class="dot mb-1"></span><span class="mb-1 ml-2">${comments.data[i].dateTime}</span>
                     </div>
-                    <div id="score">${scoreStars(i)}</div>
+                    <div id="score">${scoreStars(comments.data[i].score)}</div>
                     <div class="comment-text-sm"><span>${comments.data[i].description}</span></div>
                 </div>
                 <br>
@@ -135,24 +146,28 @@ document.addEventListener("DOMContentLoaded", function(e){
     })
 })
 
-document.getElementById("comentform").addEventListener(SubmitEvent, function(){
-    let text = document.getElementById("comenttext").value
-    localStorage.setItem("textcomment", text)
-    let stars = document.getElementById("comentpoststars").value
-    localStorage.setItem("starscomment", stars)
-    //localStorage.getItem("starscomment")
-    //localStorage.getItem("textcomment")
 
-        /*document.getElementById("commentaries").innerHTML +=`
+document.getElementById("commentform").addEventListener("submit", function(){
+    var commenttext = document.getElementById("commenttext").value
+    var commentstars = document.getElementById("commentpoststars").value
+    localStorage.setItem("commenttext", commenttext)
+    localStorage.setItem("commentstars", commentstars)
+    })
+
+
+    
+document.addEventListener("DOMContentLoaded", function(e){
+    document.getElementById("commentaries").innerHTML +=`
             
-                <div class="commented-section mt-2">
-                    <div class="d-flex flex-row align-items-center commented-user">
-                        <h5 class="mr-2">${localStorage.getItem("nombreuser")}</h5><span class="dot mb-1"></span><span class="mb-1 ml-2">${new Date()}</span>
-                    </div>
-                    <div id="score">${localStorage.getItem("starscomment")}</div>
-                    <div class="comment-text-sm"><span>${localStorage.getItem("textcomment")}</span></div>
-                </div>
-                <br>
-                <div class="division"></div>
-        `*/
+    <div class="commented-section mt-2">
+        <div class="d-flex flex-row align-items-center commented-user">
+            <h5 class="mr-2">${localStorage.getItem("nombreuser")}</h5><span class="dot mb-1"></span><span class="mb-1 ml-2">${new Date()}</span>
+        </div>
+        <div id="score">${scoreStars(parseInt(localStorage.getItem("commentstars")))}</div>
+        <div class="comment-text-sm"><span>${localStorage.getItem("commenttext")}</span></div>
+    </div>
+    <br>
+    <div class="division"></div>
+`
 })
+        

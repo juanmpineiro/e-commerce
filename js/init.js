@@ -81,5 +81,3 @@ document.getElementById("nav").innerHTML =`
       </div>
     </nav>
 `
-
-//img-fluid max-width: 100%

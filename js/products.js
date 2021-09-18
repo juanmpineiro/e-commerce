@@ -69,8 +69,8 @@ function showProductList(){
                     <div class="d-flex flex-row align-items-center">
                         <h4 class="mr-1">$`+product.cost +`</h4>
                     </div>
-                    <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button">Detalles</button>
-                    <button class="btn btn-outline-primary btn-sm mt-2" type="button">Añadir al carrito</button></div>
+                    <div class="d-flex flex-column mt-4"><a class="btn btn-primary btn-sm" type="button" href="product-info.html">Detalles</a>
+                    <a class="btn btn-outline-primary btn-sm mt-2" type="button" href="">Añadir al carrito</a></div>
                 </div>
             </div>
         </div>    
