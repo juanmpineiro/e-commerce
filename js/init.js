@@ -95,9 +95,6 @@ function username(){
   if(localStorage.getItem("nombreuser")=== null){
     location.href="index.html"
   }
-  else{
-    return localStorage.getItem("nombreuser")
-  }
 }
 
 document.addEventListener("DOMContentLoaded", function(){
