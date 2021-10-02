@@ -70,10 +70,6 @@ document.getElementById("nav").innerHTML =`
           <li class="nav-item active">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="cart.html">Mi carrito</a>
-          </li>
-
       <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle bg-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         ${localStorage.getItem("nombreuser")}
