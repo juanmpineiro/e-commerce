@@ -1,6 +1,6 @@
-/* Mostrar el producto */
+/*PANTALLAS GRANDES*/
 
-@media  only Screen and (min-width : 1400px){
+@media  only Screen and (min-width : 1300px){
     .imagewrap {display:inline-block;position:relative; margin-left: 5%; margin-right: 5%; border: 5px solid; size: 300%;}
     .responsiveimg{width: 100%; height: auto; align-items: left;}
     .button1 {position:absolute;bottom:47%;left:2%; border-radius: 50%; opacity: 65%; align-items: center;}
@@ -48,6 +48,58 @@
 }
 
 
+/*Recommended*/
+
+.relatedTittle{
+    text-align: center;
+    margin-top: 4%;
+}
+
+.relatedcontainer{
+    width: 100%;
+    margin: auto;
+    max-width: 600px;
+    max-height: 600px;
+}
+
+.productrelated{
+    float: left;
+    width: 50%;
+    
+}
+.relatedImg{
+    width: 70%;
+    border: 1px solid;
+    border-color: black;
+}
+
+.relatedInfo{
+    text-align: center;
+    margin-top: 3%;
+    margin-left: -10%;
+    margin-right: -10%;
+    margin-bottom: 3%;
+    color: black;
+}
+.relatedProductName{
+    margin-top: 12%;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 700;
+    font-family: "Century Gothic",sans-serif;
+    color: black;
+}
+
+.relatedProductPrice{
+    font-style: italic;
+    font-weight: 400;
+    font-family: "Century Gothic",sans-serif;
+    font-size: 15.5px;
+    color: black;
+}
+
+
+
 /* Comentarios */
 
 .division{
@@ -64,12 +116,12 @@
 .disabled-option{
     color: black;
 }
-
 }
 
+/*PANTALLAS PEQUENAS*/
 
 
-@media  only Screen and (max-width : 1400px){
+@media  only Screen and (max-width : 1299px){
 
     .imagewrap {display:inline-block;position:relative; margin-left: 5%; margin-right: 5%; border: 5px solid; size: 300%;}
     .responsiveimg{width: 100%; height: auto; align-items: left;}
@@ -100,6 +152,59 @@
         font-size: medium;
     }
 
+
+    /*Recommended*/
+
+.relatedTittle{
+    text-align: center;
+    margin-top: 4%;
+}
+
+.relatedcontainer{
+    width: 100%;
+    margin: auto;
+    max-width: 600px;
+    max-height: 600px;
+}
+
+.productrelated{
+    float: left;
+    width: 50%;
+    
+}
+.relatedImg{
+    width: 70%;
+    border: 1px solid;
+    border-color: black;
+}
+
+.relatedInfo{
+    text-align: center;
+    margin-top: 3%;
+    margin-left: -10%;
+    margin-right: -10%;
+    margin-bottom: 3%;
+    color: black;
+}
+.relatedProductName{
+    margin-top: 12%;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 700;
+    font-family: "Century Gothic",sans-serif;
+    color: black;
+}
+
+.relatedProductPrice{
+    font-style: italic;
+    font-weight: 400;
+    font-family: "Century Gothic",sans-serif;
+    font-size: 15.5px;
+    color: black;
+}
+    
+    
+    
     /* Comentarios */
 
 .division{
@@ -123,3 +228,6 @@
 }
 
 
+a:link, a:visited, a:active {
+    text-decoration:none;
+}

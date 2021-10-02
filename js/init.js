@@ -68,16 +68,42 @@ document.getElementById("nav").innerHTML =`
             <a class="nav-link" href="products.html">Productos</a>
           </li>
           <li class="nav-item active">
-          <a class="nav-link" href="sell.html">Vender</a>
-        </li>
-        <li class="nav-item active">
-        <a class="nav-link" href="cart.html">Mi carrito</a>
-      </li>
-      <li class="nav-item active">
-      <a class="nav-link" href="#">${localStorage.getItem("nombreuser")}</a>
-    </li>
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="cart.html">Mi carrito</a>
+          </li>
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle bg-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        ${localStorage.getItem("nombreuser")}
+        </button>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="nav-link" href="#" style="color: black;">Mi perfil</a>
+          <a class="nav-link" href="cart.html" style="color: black;">Mi carrito</a>
+          <a class="nav-link" href="index.html" style="color: black;" onclick="" id="closeuser">Cerrar sesión</a>
+        </div>
+      </div>
 
         </ul>
       </div>
     </nav>
 `
+
+document.getElementById("closeuser").addEventListener("click", function(){
+  localStorage.clear("nombreuser")
+})
+
+function username(){
+  if(localStorage.getItem("nombreuser")=== null){
+    location.href="index.html"
+  }
+  else{
+    return localStorage.getItem("nombreuser")
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+  username()
+})

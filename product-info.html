@@ -21,19 +21,26 @@
   </nav>
   <div id="name" class="up"></div>
   <main class="main">
-  <div class="flexContainer">
+    <div class="flexContainer">
       <div id="show-images" class="container1"></div>
       <div class="container2">
         <div id="product-info"></div>
       </div>
       <div class="clear"></div>
       <br>
-        <div >
-          <form id="commentform">
+      <h3 class="relatedTittle">Productos recomendados:</h3>
+      <div class="relatedcontainer">
+        <div id="recommended"></div>
+      </div>
+      <div class="clear"></div>
+      <br>
+      <div>
+        <form id="commentform">
           <div class="coment-bottom bg-white p-2 px-4">
-            <div class="d-flex flex-row add-comment-section mt-4 mb-4"><img class="img-fluid img-responsive rounded-circle mr-2" src="img/blank-profile-picture.png" width="38">
+            <div class="d-flex flex-row add-comment-section mt-4 mb-4"><img
+                class="img-fluid img-responsive rounded-circle mr-2" src="img/blank-profile-picture.png" width="38">
               <input type="text" class="form-control mr-3" placeholder="Escribe tu comentario" id="commenttext">
-              <select class="score-selected" id="commentpoststars" required >
+              <select class="score-selected" id="commentpoststars" required>
                 <option selected disabled hidden class="disabledoption" value="">Puntuacion</option>
                 <option value="1">1 estrella</option>
                 <option value="2">2 estrellas</option>
@@ -41,14 +48,15 @@
                 <option value="4">4 estrellas</option>
                 <option value="5">5 estrellas</option>
               </select>
-              <button class="btn btn-primary" type="submit">Publicar</button></div>
-            </form>
-            <div id="commentaries"></div>
-        </div>
+              <button class="btn btn-primary" type="submit">Publicar</button>
+            </div>
+        </form>
+        <div id="commentaries"></div>
       </div>
-      
-</div>
-</main>
+    </div>
+
+    </div>
+  </main>
   <footer class="text-muted">
     <div class="container">
       <p class="float-right">
@@ -70,6 +78,7 @@
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
+  <script src="js/logincheck.js"></script>
   <script src="js/product-info.js"></script>
 </body>
 

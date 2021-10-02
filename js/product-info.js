@@ -1,12 +1,13 @@
-var product = {}
+var product = []
 var valueimg = 0
 var comentarios = []
+listaAutos = []
 
 
-function showImages(array){
+function showImages(array) {
     i = valueimg
 
-        document.getElementById("show-images").innerHTML = `
+    document.getElementById("show-images").innerHTML = `
         <div class="imagewrap">
         <img class="responsiveimg" src="${array[i]}" id="imagen-swap img-fluid">
 
@@ -14,7 +15,7 @@ function showImages(array){
         <input type="button" class="button2" value=">" onclick="after()"/>
         </div>
         `
-    }
+}
 
 
 
@@ -23,10 +24,10 @@ function showImages(array){
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
-document.addEventListener("DOMContentLoaded", function(){
-    getJSONData(PRODUCT_INFO_URL).then(function(resultObj){
+document.addEventListener("DOMContentLoaded", function () {
+    getJSONData(PRODUCT_INFO_URL).then(function (resultObj) {
         product = resultObj.data
-        document.getElementById("product-info").innerHTML =`
+        document.getElementById("product-info").innerHTML = `
         <h1 class="title">${product.name}</h1>
         <br>
         <h2 class="price">$${product.cost} </h2>
@@ -38,28 +39,62 @@ document.addEventListener("DOMContentLoaded", function(){
     })
 })
 
-function after(){
-    if(valueimg < product.images.length - 1){
-    valueimg++
-    showImages(product.images)
+function after() {
+    if (valueimg < product.images.length - 1) {
+        valueimg++
+        showImages(product.images)
     }
 
 }
 
-function before(){
-    if(valueimg > 0){
-    valueimg--
-    showImages(product.images)
+function before() {
+    if (valueimg > 0) {
+        valueimg--
+        showImages(product.images)
     }
 
 }
+
+
+
+// Recomendaciones
+
+document.addEventListener("DOMContentLoaded", function () {
+    getJSONData(PRODUCTS_URL).then(function (resultObj) {
+        if (resultObj.status === "ok") {
+            listaAutos = resultObj.data
+        }
+        showRecommendedProducts()
+    })
+});
+
+function showRecommendedProducts() {
+    for (let i = 0; i < listaAutos.length; i++) {
+        if (product.relatedProducts.includes(i)) {
+            document.getElementById("recommended").innerHTML += `
+            <div class="productrelated">
+                <div class="relatedInfo">
+                    <a href="#"> <img src="${listaAutos[i].imgSrc}" class="relatedImg" onmouseover="this.style.opacity=0.7" onmouseout="this.style.opacity=1"> </a>
+                    <div class="relatedText">
+                        <a href="#"> <p class="relatedProductName" onmouseover="this.style.opacity=0.7" onmouseout="this.style.opacity=1" >${listaAutos[i].name}</p> </a>
+                        <a href="#"> <p class="relatedProductPrice" onmouseover="this.style.opacity=0.7" onmouseout="this.style.opacity=1">$ ${listaAutos[i].cost}</p> </a>
+                    </div>
+                </div>
+            </div>
+            `
+        }
+
+    }
+}
+
+
 
 // COMENTARIOS
 
 
-function scoreStars(value){
+function scoreStars(value) {
 
-    if(value === 1){
+    if (value === 1) {
         return `
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star"></span>
@@ -70,7 +105,7 @@ function scoreStars(value){
          `
     }
 
-    if(value === 2){
+    if (value === 2) {
         return `
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star checked"></span>
@@ -81,7 +116,7 @@ function scoreStars(value){
          `
     }
 
-    else if(value === 3){
+    else if (value === 3) {
         return `
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star checked"></span>
@@ -92,7 +127,7 @@ function scoreStars(value){
         `
     }
 
-    else if(value === 4){
+    else if (value === 4) {
         return `
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star checked"></span>
@@ -103,7 +138,7 @@ function scoreStars(value){
         `
     }
 
-    else if(value === 5){
+    else if (value === 5) {
         return `
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star checked"></span>
@@ -113,18 +148,18 @@ function scoreStars(value){
 
         `
     }
-    }
+}
 
-document.addEventListener("DOMContentLoaded", function(e){
-    getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function(resultObj){
-        
+document.addEventListener("DOMContentLoaded", function (e) {
+    getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function (resultObj) {
+
         comments = resultObj
 
         comentarios = resultObj.data
-        
-        for (let i=0; i<comments.data.length; i++) {
-            
-            document.getElementById("commentaries").innerHTML +=`
+
+        for (let i = 0; i < comments.data.length; i++) {
+
+            document.getElementById("commentaries").innerHTML += `
             
                 <div class="commented-section mt-2">
                     <div class="d-flex flex-row align-items-center commented-user">
@@ -137,27 +172,27 @@ document.addEventListener("DOMContentLoaded", function(e){
                 <div class="division"></div>
         `
 
-        
+
         }
 
-        
 
-        
+
+
     })
 })
 
 
-document.getElementById("commentform").addEventListener("submit", function(){
+document.getElementById("commentform").addEventListener("submit", function () {
     var commenttext = document.getElementById("commenttext").value
     var commentstars = document.getElementById("commentpoststars").value
     localStorage.setItem("commenttext", commenttext)
     localStorage.setItem("commentstars", commentstars)
-    })
+})
 
 
-    
-document.addEventListener("DOMContentLoaded", function(e){
-    document.getElementById("commentaries").innerHTML +=`
+
+document.addEventListener("DOMContentLoaded", function (e) {
+    document.getElementById("commentaries").innerHTML += `
             
     <div class="commented-section mt-2">
         <div class="d-flex flex-row align-items-center commented-user">
@@ -170,4 +205,9 @@ document.addEventListener("DOMContentLoaded", function(e){
     <div class="division"></div>
 `
 })
-        
+
+
+
+
+
+
