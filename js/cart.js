@@ -35,9 +35,9 @@ document.addEventListener("DOMContentLoaded", function(e){
                     <tr class="">
                         <td><img src="${productList[i].src}" class = "img-fluid" style ="max-width:50px!important"></td>
                         <td class="align-middle">${productList[i].name}</td>
-                        <td class="align-middle">UYU ${productList[i].unitCost.toLocaleString('en-US')}</td>
+                        <td class="align-middle">UYU ${(productList[i].unitCost * 40).toLocaleString('en-US')}</td>
                         <td class="align-middle"><input type="number" min ="1" value=${productList[i].count} onchange="subtotalChange()"></td>
-                        <td class="align-middle" id="${productID}">UYU ${(productList[i].unitCost * productList[i].count).toLocaleString('en-US')} </td>
+                        <td class="align-middle" id="${productID}">UYU ${((productList[i].unitCost * 40) * productList[i].count).toLocaleString('en-US')} </td>
                     </tr>
                     
                     `
