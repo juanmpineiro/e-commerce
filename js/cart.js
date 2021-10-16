@@ -70,6 +70,14 @@ document.addEventListener("DOMContentLoaded", function(e){
                         </div>
                         </td>
                     </tr>
+
+                    <tr>
+                        <td></td>
+                        <td class="align-middle">Dirección de envío:</td>
+                        <td class="align-middle">Calle <input type="text"></td>
+                        <td class="align-middle">Número <input type="text"></td>
+                        <td class="align-middle">Esquina <input type="text"></td>
+                    </tr>
                     
                     
                     
