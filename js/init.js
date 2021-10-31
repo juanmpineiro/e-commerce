@@ -76,7 +76,7 @@ document.getElementById("nav").innerHTML =`
         </button>
 
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="nav-link" href="#" style="color: black;">Mi perfil</a>
+          <a class="nav-link" href="my-profile.html" style="color: black;">Mi perfil</a>
           <a class="nav-link" href="cart.html" style="color: black;">Mi carrito</a>
           <a class="nav-link" href="index.html" style="color: black;" onclick="" id="closeuser">Cerrar sesión</a>
         </div>
@@ -91,6 +91,8 @@ document.getElementById("closeuser").addEventListener("click", function(){
   localStorage.clear("nombreuser")
 })
 
+
+// Funcion para que solo se pueda entrar si estas logeado(redirige a la pagina de log in si no lo estas)
 function username(){
   if(localStorage.getItem("nombreuser")=== null){
     location.href="index.html"
