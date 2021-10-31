@@ -38,6 +38,11 @@ document.addEventListener("DOMContentLoaded", function() {
                     <input type="number" id="userphone" class="form-control" aria-describedby="style_userphone">
                 </div>
 
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="style_useremail">Correo electronico:</span>
+                    <input type="number" id="useremail" class="form-control" aria-describedby="style_useremail">
+                </div>
+
                 <button type="submit" class="btn btn-dark">Guardar</button>
                         
 
@@ -48,16 +53,20 @@ document.addEventListener("DOMContentLoaded", function() {
     
     `
 
+    /* Guardo los datos del usuario */
+
     document.getElementById("formdata").addEventListener("submit", function(){
         let name= document.getElementById("username").value;
         let surname = document.getElementById("usersurname").value;
         let birth = document.getElementById("userbirth").value;
         let phone = document.getElementById("userphone").value;
-        let data4json = {user_name: name, user_surname: surname, user_birth: birth, user_phone: phone}
+        let email = document.getElementById("useremail").value
+        let data4json = {user_name: name, user_surname: surname, user_birth: birth, user_phone: phone, user_email: email}
         let userdata = JSON.stringify(data4json)
         localStorage.setItem("userdatasave", userdata)
     })
 
+    /* Si hay datos previamente guardados los muestra */
 
     let userdata2 = JSON.parse(localStorage.getItem("userdatasave"))
 
@@ -65,6 +74,9 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("usersurname").value = userdata2.user_surname
     document.getElementById("userbirth").value = userdata2.user_birth
     document.getElementById("userphone").value = userdata2.user_phone
+    document.getElementById("useremail").value = userdata2.user_email
+
+    /* Guardo la foto de perfil y la muestro */
 
 
     document.getElementById("upload_pfp").addEventListener("change", function(){
