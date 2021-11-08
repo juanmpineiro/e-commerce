@@ -1,0 +1,38 @@
+.cc_input {
+    margin: 1%;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    
+}
+
+.creditcard_css{
+    background-color: #f6f6f6;
+    margin: 2%;
+    border: 1px solid #d9d9d9;
+}
+
+#credit_card_input{
+    display: none;
+    align-items: center;
+}
+.bank_radio{
+    display: none;
+}
+
+.cc_input_div{
+    text-align: center;
+}
+
+.bank_input_div {
+    text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
